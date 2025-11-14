@@ -8,6 +8,11 @@ const products = [
     icon: PackageOpen,
     highlights: ["Hand-picked", "AA Grade", "Vacuum sealed"],
     color: "from-amber-400/20 to-amber-600/20",
+    images: [
+      "https://source.unsplash.com/featured/400x300?almonds",
+      "https://source.unsplash.com/featured/400x300?cashews",
+      "https://source.unsplash.com/featured/400x300?raisins",
+    ],
   },
   {
     name: "Mirchi",
@@ -15,6 +20,11 @@ const products = [
     icon: FlameKindling,
     highlights: ["Stemless options", "Scoville tested", "Bulk packed"],
     color: "from-rose-400/20 to-rose-600/20",
+    images: [
+      "https://source.unsplash.com/featured/400x300?red%20chili",
+      "https://source.unsplash.com/featured/400x300?dried%20chili",
+      "https://source.unsplash.com/featured/400x300?chilli%20peppers",
+    ],
   },
   {
     name: "Corn",
@@ -22,6 +32,11 @@ const products = [
     icon: Leaf,
     highlights: ["Grade A", "Moisture < 14%", "Fumigated"],
     color: "from-emerald-400/20 to-emerald-600/20",
+    images: [
+      "https://source.unsplash.com/featured/400x300?yellow%20corn",
+      "https://source.unsplash.com/featured/400x300?maize%20kernels",
+      "https://source.unsplash.com/featured/400x300?corn%20grain",
+    ],
   },
 ];
 
@@ -50,7 +65,20 @@ export default function Products() {
               transition={{ delay: 0.05 * idx, duration: 0.5 }}
               className="group relative overflow-hidden rounded-2xl border border-gray-200 bg-white p-6 shadow-sm"
             >
-              <div className={`h-32 rounded-xl bg-gradient-to-br ${p.color}`} />
+              {/* Image strip */}
+              <div className="grid grid-cols-3 gap-2">
+                {p.images?.map((src, i) => (
+                  <div key={i} className="relative overflow-hidden rounded-xl">
+                    <img
+                      src={src}
+                      alt={`${p.name} ${i + 1}`}
+                      className="h-28 w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      loading="lazy"
+                    />
+                  </div>
+                ))}
+              </div>
+
               <div className="mt-5 flex items-start justify-between gap-3">
                 <div>
                   <div className="flex items-center gap-2">

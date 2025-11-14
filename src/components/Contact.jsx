@@ -50,8 +50,8 @@ export default function Contact() {
           <div className="rounded-2xl border border-gray-200 bg-gradient-to-br from-emerald-50 via-amber-50 to-rose-50 p-6 shadow-sm">
             <div className="grid gap-3 text-sm text-gray-700">
               <p><span className="font-semibold">Head Office:</span> Hyderabad, India</p>
-              <p><span className="font-semibold">Email:</span> trade@agriexports.com</p>
-              <p><span className="font-semibold">Phone:</span> +91 98765 43210</p>
+              <p><span className="font-semibold">Email:</span> Grapesclub25@gmail.com</p>
+              <p><span className="font-semibold">Phone:</span> 9848045623, 7075057345</p>
               <p><span className="font-semibold">Working Hours:</span> Mon–Sat, 9am–7pm IST</p>
             </div>
             <div className="mt-6 grid grid-cols-3 gap-3">
